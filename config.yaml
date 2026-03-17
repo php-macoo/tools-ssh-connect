@@ -1,0 +1,32 @@
+# SSH 自动连接配置
+# 复制到 ~/.ssh-connect.yaml 后按需修改
+# 使用: ssh-connect          # 连接 default
+#       ssh-connect 62      # 连接 servers.62
+# servers下的key为服务器名称，如62、prod-88、prod-92，不要更改，已写入zsh alias
+
+default:
+  account: root
+  password: "your_pwd"
+  ip: 192.168.1.62
+  desc: ：【测试服务器】
+  port: 22
+
+servers:
+  62:
+    account: root
+    password: "your_pwd*"
+    ip: 192.168.1.62
+    port: 22
+    desc: ：【测试服务器】
+  prod-88:
+    account: root
+    password: "your_pwd"
+    ip: 117.89.29.88
+    port: 22  
+    desc: ：mysql主库-【生产服务器】
+  prod-92:
+    account: root
+    password: "your_pwd"
+    ip: 121.229.204.92
+    port: 22
+    desc: ：mysql从库-【生产服务器】
