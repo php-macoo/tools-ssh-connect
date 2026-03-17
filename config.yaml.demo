@@ -1,0 +1,38 @@
+# SSH 自动连接配置
+#
+# 去掉文件名结尾的【.demo】
+# 去掉文件名结尾的【.demo】
+# 去掉文件名结尾的【.demo】
+#
+# 复制到 ~/.ssh-connect.yaml 后按需修改
+# 使用: ssh-connect          # 连接 default
+#       ssh-connect 62      # 连接 servers.62
+# servers下的key为服务器名称，如62、prod-88、prod-92，不要更改，已写入zsh alias
+
+default:
+  account: root 
+  
+  password: "YOUR_PWD"
+  ip: 127.*.*.*
+  desc: ：【测试服务器】
+  port: 22
+
+servers:
+  62:
+    account: root
+    password: "YOUR_PWD"
+    ip: 127.*.*.*
+    port: 22
+    desc: ：【测试服务器】
+  prod-88:
+    account: root
+    password: "YOUR_PWD"
+    ip: 127.*.*.*
+    port: 22  
+    desc: ：mysql主库-【生产服务器】
+  prod-92:
+    account: root
+    password: "YOUR_PWD"
+    ip: 127.*.*.*
+    port: 22
+    desc: ：mysql从库-【生产服务器】
